@@ -1,6 +1,6 @@
 # Installation
 
-Make setup.sh executable and run it:
+Clone the repository. Make setup.sh executable and run it:
 
 ```shell
 chmod +x setup.sh
