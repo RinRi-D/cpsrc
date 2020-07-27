@@ -1,8 +1,10 @@
 # Installation
 
-Clone the repository. Make setup.sh executable and run it:
+Clone the repository and make setup.sh executable and run it:
 
 ```shell
+git clone https://git.rinri-d.xyz/rinri/cpsrc.git
+cd cpsrc
 chmod +x setup.sh
 ./setup.sh
 ```
