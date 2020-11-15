@@ -11,7 +11,7 @@ read -p $'Enter starting line of cursor:\n' line
 echo "$line"gg > .gg
 
 # run.sh
-echo $'g++ -g $1\n./a.out' > run.sh
+echo $'g++ -std=c++14 -g $1\necho "Compiled..."\n./a.out\necho' > run.sh
 
 # make all executable
 chmod +x create.sh
