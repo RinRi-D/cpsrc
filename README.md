@@ -13,15 +13,16 @@ First, you have to write template which will be used to create new files. Rememb
 
 # Using
 
-In order to create a new .cpp file, you have to run create.sh with filename argument without an extension:
+In order to create a new .cpp file, you have to run create.sh with filename argument:
 
 ```shell
 ./create.sh 1234a
 ```
 
-You will be automatically redirected to neovim.
+It will create 1234a.cpp. You can enter 1234a.cpp instead of 1234a and you will get the same result.
+Then you will be automatically redirected to neovim.
 
-To compile&run file, you can just use run.sh with filename(this time with extension):
+To compile and run file, you can use run.sh with filename as an argument(you can use both filename with extension and without):
 
 ```shell
 ./run.sh 1234a.cpp
