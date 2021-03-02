@@ -36,7 +36,7 @@ cd bits
 cp /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/stdc++.h .
 
 # compile them and use the same c++ standard as in Makefile
-g++ -std=c++14 stdc++.h
+g++ -g -std=c++14 stdc++.h
 ```
 
 Don't forget to use double quotes in the template. GCC uses the local precompiled library first. If there is no local library, it uses system's one. 
