@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -std=c++14
+CXXFLAGS = -g -Wall -std=c++14
 
 all: $(patsubst %.cpp, %.out, $(wildcard *.cpp))
 
