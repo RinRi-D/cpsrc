@@ -1,3 +1,10 @@
+Cpsrc is a tool to automate and enhance competitive programmer's experience. It works well with neovim and C++. You can also modify it to use the editor and programming language of your choice.
+
+Cpsrc offers several features:
+- Automatic template 
+- Fast and easy compilation (using Makefile and precompiled headers)
+- Colored input/output
+
 # Installation
 
 Clone the repository and make setup.sh executable and run it:
@@ -9,37 +16,31 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-First, write a template which will be used to create new files. Enter the number of the starting line. That is it!
+Write a template that will be used to create new .cpp files. Enter the number of the starting line.
 
 # Usage
 
-To create a new .cpp file, run create.sh with filename argument:
+To create a new .cpp file, run create.sh with a filename as an argument:
 
 ```shell
 ./create.sh 1234a
 ```
 
-It will create 1234a.cpp and open neovim. Enter either type 1234a.cpp and 1234a.
+It will create 1234a.cpp and open neovim. Enter either 1234a.cpp or 1234a.
 
-To compile and run file, use run.sh with filename(or problem name) as an argument:
+To compile and run the file, use run.sh with the filename (or problem name, e.g., 1234a) as an argument:
 
 ```shell
 ./run.sh 1234a.cpp
 ```
 
-To compile faster, precompile needed header files in the directory.
+To compile extremely fast, precompile needed header files in the directory. To precompile bits/stdc++.h use `make`:
 
 ```shell
-# copy libraries
-mkdir bits
-cd bits
-cp /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/stdc++.h .
-
-# compile them and use the same c++ standard as in Makefile
-g++ -g -std=c++14 stdc++.h
+make cpstd
 ```
 
-Don't forget to use double quotes in the template. GCC uses the local precompiled library first. If there is no local library, it uses system's one. 
+If it didn't work, you should do it manually by copying a header file in the directory and compiling it with the same flags used in the Makefile. Don't forget to use double quotes in your template. With double quotes, GCC uses a local header first.
 
 ```c++
 #include "bits/stdc++.h"

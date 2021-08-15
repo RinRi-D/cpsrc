@@ -1,13 +1,14 @@
+#!/bin/sh
+
 # template
-read -n 1 -r -s -p $'Press any key to create template file...\n'
+read -p 'Press Enter to create a template...' line
 nvim .config.d/template.cpp
 
-# start line
-read -p $'Enter starting line of cursor:\n' line
-((line=line-1))
+# starting line
+read -p "Enter the starting line: " line
 echo "$line"gg > .config.d/cursorpos
 
-# make all executable
+# make everything executable
 chmod +x create.sh
 chmod +x run.sh
 chmod +x .config.d/color.sh

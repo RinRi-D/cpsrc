@@ -1,0 +1,7 @@
+*.cpp
+*.out
+*.h
+*.hpp
+bits
+./.config.d/*.cpp
+./.config.d/cursorpos
